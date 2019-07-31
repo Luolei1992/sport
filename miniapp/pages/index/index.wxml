@@ -1,0 +1,70 @@
+<!-- index.wxml -->
+<view class="container" bindtap="hideSlide">
+  <view class="activeTabSelect">
+    <view class="activeTeam activePub">
+      <view class="{{current=='team'?'currentActive':''}}" data-val="team" bindtap="handleClick">
+        {{selectName}}
+        <image class="slide" catchtap="handleSlide" mode="aspectFill" src="{{current=='team'?'../../imgs/slide.png':'../../imgs/slide-select.png'}}"></image>
+      </view>
+      <view wx:if="{{select}}" class="teamList">
+        <view class="teams" hover-stay-time="100" hover-class="clickActiveStyle" data-id="4" data-name="团队动态" bindtap="mySelect">团队动态</view>
+        <view class="teams" hover-stay-time="100" hover-class="clickActiveStyle" data-id="1" data-name="清帆科技" bindtap="mySelect">清帆科技</view>
+        <view class="teams" hover-stay-time="100" hover-class="clickActiveStyle" data-id="2" data-name="朗通医疗" bindtap="mySelect">朗通医疗</view>
+        <view class="teams" hover-stay-time="100" hover-class="clickActiveStyle" data-id="3" data-name="杭州西湖" bindtap="mySelect">杭州西湖</view>
+      </view>
+    </view>
+    <view class="{{current=='own'?'currentActive':''}} activeOwn activePub" data-val="own" bindtap="handleClick">
+      个人动态
+    </view>
+  </view>
+  <view class="detailList" hidden="{{current=='own'}}">
+    <view class="list" wx:for="{{teamActiveList}}" wx:key="{{uid}}">
+      <view class="sectionImg">
+        <image class="imgLis" mode="aspectFill" src="{{item.avatar}}"></image>
+        <text class="perName">{{item.username}}</text>
+        <text class="teamName">{{item.team_name}}</text>
+        <view class="content">
+          <view class="description">{{item.content}}</view>
+          <view class="view" wx:for="{{item.imgs}}" bindtap="handleImgClick" wx:key="*this" wx:for-item="part">
+            <image class="viewImg" mode="widthFix" src="{{part}}"></image>
+          </view>
+          <view>
+            <text class="date">2019/07/29</text>
+            <image class="heart" mode="aspectFill" src="../../imgs/heart.png"></image>
+          </view>
+          <view class="like">
+            <text wx:for="{{item.liked_list}}" wx:for-index="idx" wx:for-item="name" wx:key="*this">{{name}}<text wx:if="{{item.liked_list.length-1!=idx}}">、</text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="detailList" hidden="{{current=='team'}}">
+    <view class="list" wx:for="{{teamActiveList}}" wx:key="{{uid}}">
+      <view class="sectionImg">
+        <image class="imgLis" mode="aspectFill" src="{{item.avatar}}"></image>
+        <text class="perName">{{item.username}}</text>
+        <text class="teamName">{{item.team_name}}</text>
+        <view class="content">
+          <view class="description">{{item.content}}</view>
+          <view class="view" wx:for="{{item.imgs}}" wx:key="*this" wx:for-item="part" bindtap="handleImgClick">
+            <image class="viewImg" mode="widthFix" src="{{part}}"></image>
+          </view>
+          <view>
+            <text class="date">2019/07/29</text>
+            <image class="heart" mode="aspectFill" src="../../imgs/heart.png"></image>
+          </view>
+          <view class="like">
+            <text wx:for="{{item.liked_list}}" wx:for-index="idx" wx:for-item="name" wx:key="*this">{{name}}<text wx:if="{{item.liked_list.length-1!=idx}}">、</text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="userinfo" wx:if="{{!hasUserInfo && canIUse}}">
+    <view class="userinfoModal"></view>
+    <button class="userinfoBtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      获取头像昵称
+    </button>
+  </view>
+</view>

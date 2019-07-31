@@ -1,0 +1,150 @@
+.container {
+  padding-top: 80rpx;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.activeTabSelect {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.activeOwn {
+  box-sizing: border-box;
+}
+.activePub {
+  width: 50%;
+
+  font-size: 14px;
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  background-color: #ededed;
+  font-size: 32rpx;
+  position: relative;
+  .slide {
+    width: 30rpx;
+    height: 30rpx;
+    position: relative;
+    padding: 25rpx;
+    vertical-align: top;
+  }
+}
+.userinfo {
+  
+}
+.userinfoModal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0,0,0,0.3); */
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.userinfoBtn {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 100;
+}
+.currentActive {
+  /* color: #2d8cf0; */
+  color: #fff;
+  background-color: #2d8cf0;
+}
+
+.teamList {
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid #ffffff;
+  overflow: hidden;
+  animation: myfirst 0.1s linear;
+}
+
+.teams {
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: #ededed;
+  border-bottom: 1px solid #fff;
+  font-size: 28rpx;
+}
+
+.clickActiveStyle {
+  background-color: #2d8cf0;
+  color: #fff;
+}
+@keyframes myfirst {
+  from {
+    height: 0rpx;
+  }
+
+  to {
+    height: 210rpx;
+  }
+}
+
+.detailList {
+  width: 100%;
+  .list {
+    width: 100%;
+    padding: 20rpx;
+    // padding-bottom: 10rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .imgLis {
+    width: 100rpx;
+    height: 100rpx;
+    float: left;
+    background-color: red;
+    margin-right: 15rpx;
+  }
+  .heart {
+    width: 40rpx;
+    height: 40rpx;
+    padding: 0 8px 0 20px;
+    float: right;
+  }
+  .content {
+    padding-left: 115rpx;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    .view {
+      width: 50%;
+      display: inline-block;
+      padding: 5px;
+      box-sizing: border-box;
+      .viewImg {
+        width: 100%;
+      }
+    }
+    .date {
+      color: #858585;
+      font-size:14px;
+    }
+    .like {
+      background-color: #f5f5f5;
+      padding: 0 10rpx;
+      color: #333;
+      font-size:14px;
+    }
+  }
+  .perName {
+    // color: #3070b2;
+  }
+  .description {
+    color: #333;
+  }
+  .teamName {
+    float: right;
+    padding-right: 8px;
+  }
+}

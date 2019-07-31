@@ -1,0 +1,77 @@
+<view class="team">
+  <view class="teamEmpty" wx:if="{{!isEmpty}}">
+    <view class="teamTip">你还没有加入任何团队哦</view>
+    <button class="creatTeam teamPub" type="primary" bindtap="toggleTeam"> 创建团队 </button>
+    <button class="joinTeam teamPub" type="primary" bindtap="clockCommit"> 加入团队 </button>
+  </view>
+  <view class="teamEmpty" wx:else>
+    <button class="creatTeam teamPub" type="primary" bindtap="toggleTeam"> 创建团队 </button>
+  </view>
+  <view class="teamLis">
+    <view class="teamPart">
+      <view class="teamPartL">
+        <image class="teamLogo" src="../../imgs/group.png" mode="widthFix"/>
+      </view>
+      <view class="teamPartR">
+        <text class="teamName">骚蒋的团队</text>
+        <view class="teamPartT">
+          瘦了，全世界都是你的；瘦了，全世界都是你的；瘦了，全世界都是你的
+        </view>
+        <text class="add">邀请成员</text>
+        <text class="quite">退出团队</text>
+      </view>
+    </view>
+  </view>
+  <view class="teamCreat">
+  <view class="teamMsg">
+    <view class="teamName">团队名称：</view>
+    <input class="teamIpt" type="text" bind:input="inputName"/>
+  </view>
+  <view class="teamMsg">
+    <text class="teamName">团队成员列表：</text>
+    <text class="teamName">14/13</text>
+    <view>
+      <table class="teamMember">
+        <tr>
+          <td>姓名</td>
+          <td>类型</td>
+          <td>已完成/目标</td>
+          <td>累计运动时常</td>
+          <td>获赞参数</td>
+        </tr>
+      </table>
+    </view>
+    <input class="teamIpt" type="text" bind:input="inputName"/>
+  </view>
+  <view class="teamMsg">
+    <view class="teamName">团队目标：</view>
+    <textarea class="teamTxt" type="text" />
+  </view>
+  <view class="teamMsg">
+    <view class="teamName">团队宣言：</view>
+    <textarea class="teamTxt" type="text" />
+  </view>
+  <view class="teamMsg">
+    <view class="teamName">团队开启与结束时间：</view>
+    <textarea class="teamTxt" type="text" />
+  </view>
+  <view class="teamMsg">
+    <view class="teamName">奖惩措施：</view>
+    <textarea class="teamTxt" type="text" />
+  </view>
+  <view class="teamMsg">
+    <view class="teamPart teamType">
+      <text class="teamName">设置你的运动类型：</text>
+      <textarea class="teamTxt" type="text" />
+    </view>
+    <view class="teamPart teamPoint">
+      <text class="teamName">设置你的目标：</text>
+      <textarea class="teamTxt" type="text" />
+    </view>
+  </view>
+  <view class="teamMsg">
+    <view class="teamName">上传团队logo：</view>
+
+  </view>
+</view>
+</view>

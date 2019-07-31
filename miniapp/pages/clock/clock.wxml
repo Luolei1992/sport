@@ -1,0 +1,28 @@
+
+<view class="select">
+  <view class="selectWrap">
+    <text class="optionName">所属团队</text>
+    <Select class="sectionSelect" select-array='{{selectArray}}'  current-text="{{current_text}}" bind:getNowData='getCurrentTextAction'></Select>
+  </view>
+  <view class="selectWrap">
+    <text class="optionName">运动类型</text>
+    <input data-type="1" class="sectionSelect" bindinput="bindKeyInput" placeholder="请输入运动类型"/>
+  </view>
+  <view class="selectWrap">
+    <text class="optionName">本次完成(个/公里)</text>
+    <input data-type="2" type="number" class="sectionSelect" bindinput="bindKeyInput" placeholder="请输入运动量"/>
+  </view>
+  <view class="selectWrap">
+    <text class="optionName">本次运动时长(分钟)</text>
+    <input data-type="3" type="number" class="sectionSelect" bindinput="bindKeyInput" placeholder="请输入运动时长"/>
+  </view>
+  <view class="selectWrap selectBlock">
+    <text class="optionName">想说的话</text>
+    <textarea bindblur="bindTextAreaBlur" auto-height placeholder="再接再厉，团员们加油啦！！！" />
+  </view>
+  <view class="selectWrap">
+    <text class="optionName">上传认证照</text>
+    
+  </view>
+  <button class="primary" type="primary" bindtap="clockCommit"> 确认打卡 </button>
+</view>

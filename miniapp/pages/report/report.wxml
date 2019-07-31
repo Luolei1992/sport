@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="usermotto">
+    <text class="report">{{msg}}</text>
+  </view>
+</view>

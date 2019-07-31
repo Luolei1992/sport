@@ -1,0 +1,54 @@
+.selectBox {
+  width: 100%;
+  position: relative;
+}
+.selectContent {
+  border: 2rpx solid #e2e2e2;
+  border-radius: 10rpx;
+  background: white;
+  font-size: 32rpx;
+  position: relative;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 10px;
+}
+.selectText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+}
+.selectImg {
+  position: absolute;
+  right:24rpx;
+  top:14rpx;
+  width:40rpx;
+  height:40rpx;
+  
+  transition: all .3s ease;
+}
+.selectList {
+  background: white;
+  width: inherit;
+  position: absolute;
+  border: 2rpx solid #e2e2e2;
+  border-top: none;
+  box-sizing: border-box;
+  z-index: 3;
+  max-height: 160rpx;
+  overflow: auto;
+}
+.selectListItem {
+  height: 30px;
+  line-height: 30px;
+  border-top: 2rpx solid #e2e2e2;
+  padding: 0 10px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+}
+.selectListItem:first-child {
+  border-top: none;
+}

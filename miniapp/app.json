@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/team/team",
+    "pages/clock/clock",
+    "pages/index/index",
+    "pages/report/report",
+    "pages/logs/logs",
+    "pages/testInterface"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat555",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#80848f",
+    "selectedColor":"#2d8cf0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"imgs/collection.png",
+        "selectedIconPath":"imgs/collection_fill.png",
+        "text": "动态"
+      }, 
+      {
+        "pagePath": "pages/clock/clock",
+        "iconPath":"imgs/clock.png",
+        "selectedIconPath":"imgs/clock_fill.png",
+        "text": "打卡"
+      }, 
+      {
+        "pagePath": "pages/team/team",
+        "iconPath":"imgs/group.png",
+        "selectedIconPath":"imgs/group_fill.png",
+        "text": "团队"
+      }, 
+      {
+        "pagePath": "pages/report/report",
+        "iconPath":"imgs/dynamic.png",
+        "selectedIconPath":"imgs/dynamic_fill.png",
+        "text": "报表"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userInfo":{
+      "desc": "你的个人信息将用于小程序位置接口的效果展示"
+    }
+  }
+}
